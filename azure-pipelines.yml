@@ -1,4 +1,15 @@
 # ASP.NET Core
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    ConnectedServiceName: 'Free Trial(26be4846-d6a3-46ae-b8c2-4693f82dc400)'
+    subscriptionName: '26be4846-d6a3-46ae-b8c2-4693f82dc400'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Kevin'
+    location: 'France Central'
+    templateLocation: 'Linked artifact'
+    csmFile: 'toto'
+    deploymentMode: 'Complete'
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
